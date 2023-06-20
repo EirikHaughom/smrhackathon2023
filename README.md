@@ -38,7 +38,7 @@ The repo includes sample data so it's ready to try end to end. In this sample ap
 
 #### To Run in VS Code Remote Containers (recommended)
 
-You can run this repo virtually by using GitHub Codespaces or VS Code Remote Containers.  Click on one of the buttons below to open this repo in one of those options.
+You can run this repo virtually by using VS Code Remote Containers.  Click on the button below to open this repo in VS Code Remote Containers.
 
 [![Open in Remote - Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/EirikHaughom/smrhackathon2023)
 
