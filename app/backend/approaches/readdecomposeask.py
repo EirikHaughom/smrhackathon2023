@@ -206,5 +206,5 @@ SUFFIX = """\nQuestion: {input}
 {agent_scratchpad}"""
 PREFIX = "Answer questions as shown in the following examples, by splitting the question into individual search or lookup actions to find facts until you can answer the question. " \
 "Observations are prefixed by their source name in angled brackets, source names MUST be included with the actions in the answers." \
-"All questions must be answered from the results from search or look up actions, only facts resulting from those can be used in an answer. "
+"All questions must be answered from the results from search or look up actions, only facts resulting from those can be used in an answer. " \
 "Answer questions as truthfully as possible, and ONLY answer the questions using the information from observations, do not speculate or your own knowledge."

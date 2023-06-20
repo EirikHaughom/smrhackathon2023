@@ -1,11 +1,11 @@
-# ChatGPT + Enterprise data with Azure OpenAI and Cognitive Search
+# SMR Hackathon 2023 by Eirik
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 [![Open in Remote - Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
 
 This sample demonstrates a few approaches for creating ChatGPT-like experiences over your own data using the Retrieval Augmented Generation pattern. It uses Azure OpenAI Service to access the ChatGPT model (gpt-35-turbo), and Azure Cognitive Search for data indexing and retrieval.
 
-The repo includes sample data so it's ready to try end to end. In this sample application we use a fictitious company called Contoso Electronics, and the experience allows its employees to ask questions about the benefits, internal policies, as well as job descriptions and roles.
+The repo includes sample data so it's ready to try end to end. In this sample application we use a fictitious company called Contoso Energy, and the experience allows its employees to ask questions about the environmental report related to Kairos Power's Hermes Non-Power Reactor.
 
 ![RAG Architecture](docs/appcomponents.png)
 
@@ -16,8 +16,6 @@ The repo includes sample data so it's ready to try end to end. In this sample ap
 * Shows possible approaches for data preparation, prompt construction, and orchestration of interaction between model (ChatGPT) and retriever (Cognitive Search)
 * Settings directly in the UX to tweak the behavior and experiment with options
 
-![Chat screen](docs/chatscreen.png)
-
 ## Getting Started
 
 > **IMPORTANT:** In order to deploy and run this example, you'll need an **Azure subscription with access enabled for the Azure OpenAI service**. You can request access [here](https://aka.ms/oaiapply). You can also visit [here](https://azure.microsoft.com/free/cognitive-search/) to get some free Azure credits to get you started.
@@ -26,7 +24,7 @@ The repo includes sample data so it's ready to try end to end. In this sample ap
 
 ### Prerequisites
 
-#### To Run Locally
+#### To Run Locally (not recommended)
 - [Azure Developer CLI](https://aka.ms/azure-dev/install)
 - [Python 3+](https://www.python.org/downloads/)
     - **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
@@ -38,7 +36,8 @@ The repo includes sample data so it's ready to try end to end. In this sample ap
 
 >NOTE: Your Azure Account must have `Microsoft.Authorization/roleAssignments/write` permissions, such as [User Access Administrator](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#owner).  
 
-#### To Run in GitHub Codespaces or VS Code Remote Containers
+
+#### To Run in GitHub Codespaces or VS Code Remote Containers (recommended)
 
 You can run this repo virtually by using GitHub Codespaces or VS Code Remote Containers.  Click on one of the buttons below to open this repo in one of those options.
 
@@ -51,7 +50,7 @@ You can run this repo virtually by using GitHub Codespaces or VS Code Remote Con
 
 1. Create a new folder and switch to it in the terminal
 1. Run `azd auth login`
-1. Run `azd init -t azure-search-openai-demo`
+1. Run `azd init -t smrhackathon2023`
     * For the target location, the regions that currently support the models used in this sample are **East US** or **South Central US**. For an up-to-date list of regions and models, check [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
     * note that this command will initialize a git repository and you do not need to clone this repository
 
@@ -112,7 +111,7 @@ Once in the web app:
 * [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview)
 
 ### Note
->Note: The PDF documents used in this demo contain information generated using a language model (Azure OpenAI Service). The information contained in these documents is only for demonstration purposes and does not reflect the opinions or beliefs of Microsoft. Microsoft makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the information contained in this document. All rights reserved to Microsoft.
+>Note: The PDF documents used in this demo contain public information accessible at [nrs.gov](https://www.nrc.gov/docs/ML2130/ML21306A133.pdf). The information contained in these documents is only for demonstration purposes and does not reflect the opinions or beliefs of Microsoft. Microsoft makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the information contained in this document. All rights reserved to Microsoft.
 
 ### FAQ
 
