@@ -48,7 +48,7 @@ You can run this repo virtually by using VS Code Remote Containers.  Click on th
 
 1. Create a new folder and switch to it in the terminal
 1. Run `azd auth login`
-1. Run `azd init -t smrhackathon2023`
+1. Run `azd init -t https://github.com/EirikHaughom/smrhackathon2023`
     * For the target location, the regions that currently support the models used in this sample are **East US** or **South Central US**. For an up-to-date list of regions and models, check [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
     * note that this command will initialize a git repository and you do not need to clone this repository
 
@@ -88,7 +88,7 @@ It will look like the following:
 Run the following if you want to give someone else access to completely deployed and existing environment.
 
 1. Install the [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
-1. Run `azd init -t smrhackathon2023`
+1. Run `azd init -t https://github.com/EirikHaughom/smrhackathon2023`
 1. Run `azd env refresh -e {environment name}` - Note that they will need the azd environment name, subscription Id, and location to run this command - you can find those values in your `./azure/{env name}/.env` file.  This will populate their azd environment's .env file with all the settings needed to run the app locally.
 1. Run `pwsh ./scripts/roles.ps1` - This will assign all of the necessary roles to the user so they can run the app locally.  If they do not have the necessary permission to create roles in the subscription, then you may need to run this script for them. Just be sure to set the `AZURE_PRINCIPAL_ID` environment variable in the azd .env file or in the active shell to their Azure Id, which they can get with `az account show`.
 
